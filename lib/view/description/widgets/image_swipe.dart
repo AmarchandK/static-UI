@@ -1,4 +1,3 @@
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +26,19 @@ class SwipableImage extends StatelessWidget {
                 image: AssetImage(imges[index]),
               ),
             ),
+            child: Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.grey,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: const Text('Give Rating'),
+                  ),
+                )),
           );
         },
         options: CarouselOptions(
