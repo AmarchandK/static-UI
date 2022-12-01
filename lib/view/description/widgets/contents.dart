@@ -1,6 +1,7 @@
 import 'package:aimplatfarm_ui/core/constants.dart';
 import 'package:aimplatfarm_ui/view/home/homepage.dart';
 import 'package:flutter/material.dart';
+
 class Contents extends StatelessWidget {
   const Contents({
     Key? key,
@@ -31,16 +32,18 @@ class Contents extends StatelessWidget {
             headingText(text: 'Feedback'),
             Center(
                 child: contents(
+                    align: TextAlign.center,
+                    style: FontStyle.italic,
                     text:
-                        "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like")),
+                        "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)")),
             headingText(text: 'Sample Work'),
             SizedBox(
-              height: 500,
+              height: 400,
               child: GridView.builder(
+                padding: const EdgeInsets.all(0),
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                ),
+                    childAspectRatio: 0.8, crossAxisCount: 2),
                 itemCount: imges.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
@@ -54,8 +57,6 @@ class Contents extends StatelessWidget {
                         ),
                       ),
                       child: Container(
-                        width: 100,
-                        height: 300,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           image: DecorationImage(

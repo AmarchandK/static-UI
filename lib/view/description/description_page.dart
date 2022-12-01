@@ -1,3 +1,4 @@
+import 'package:aimplatfarm_ui/core/constants.dart';
 import 'package:aimplatfarm_ui/view/description/widgets/contents.dart';
 import 'package:aimplatfarm_ui/view/description/widgets/image_swipe.dart';
 import 'package:aimplatfarm_ui/view/description/widgets/tile.dart';
@@ -14,6 +15,7 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: bColor,
       body: Stack(
         children: [
           Column(
